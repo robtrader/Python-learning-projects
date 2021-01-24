@@ -1,0 +1,23 @@
+import random
+
+l = []
+num = 1
+
+random.seed(a=None, version=2)
+mega = random.randint(1,27)
+
+for x in range(5):
+    pick = random.randint(1,47)
+    while pick in l:
+        pick = random.randint(1,47)
+    l.append(pick)
+
+l.sort()
+
+for i in l:
+    print('Pick ' + str(num) + ': ' + str(i))
+    num += 1
+    if num == 6:
+        num = 1
+
+print('Mega: ' + str(mega))
